@@ -1,12 +1,12 @@
 # Advent Research: hosting details for the update job
 
-**Site:** research.adventfa.com. Until the domain is attached it runs at https://advent-research.pages.dev.
+**Site:** https://research.adventfa.com (live).
 **Purpose:** data pages on markets, products and similar topics that a scheduled job updates. Financial-planning concept articles stay on the blog at adventfa.com. Blog posts can link to research pages, and research pages can link back.
 
 ## Where to publish
 
 - **Repository:** `github.com/rahulfy/advent-research`, branch `main`. The repo is **public**, so anything committed is visible to anyone.
-- **How it goes live:** every push to `main` triggers a GitHub Action that publishes the site to Cloudflare Pages in about a minute. The job only has to commit; it needs no Cloudflare access.
+- **How it goes live:** every push to `main` triggers a GitHub Action that publishes the site to Cloudflare (Worker `advent-research`) in about a minute. The job only has to commit; it needs no Cloudflare access.
 - **Access:** the repo is Rahul's own (`rahulfy`). The job needs the Claude GitHub app installed on it with write access.
 
 ## Repository layout
@@ -71,7 +71,4 @@ A one-off commit when the tool launches:
 
 ## Not set up yet (our side)
 
-- Custom domain research.adventfa.com (it will be attached in Cloudflare)
-- Cloudflare token for the publish Action: a repo secret `CLOUDFLARE_API_TOKEN` (Cloudflare Pages: Edit on the Rahul@adventfa.com account), added by the repo admin. Until it is added, commits land in the repo but don't go live.
-- Claude GitHub app on the repository
 - Analytics: none for now. Adding GA4 needs the privacy policy to cover this subdomain first.

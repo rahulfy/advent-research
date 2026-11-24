@@ -1,5 +1,14 @@
 {
   "name": "advent-research",
-  "pages_build_output_dir": "./dist",
-  "compatibility_date": "2026-11-01"
+  "account_id": "c0664a4ca5349453c8372469fe2e5c4a",
+  "compatibility_date": "2026-11-01",
+  // Static files only. build.sh copies the site (repo root, minus .deployignore)
+  // into dist/; the nightly SIF job commits sif/index.html at the repo root.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "routes": [{ "pattern": "research.adventfa.com", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false
 }
