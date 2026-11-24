@@ -1,0 +1,13 @@
+{
+  "name": "advent-research",
+  "account_id": "c0664a4ca5349453c8372469fe2e5c4a",
+  "compatibility_date": "2026-11-01",
+  // Static files only. The nightly SIF job commits sif/index.html to main and
+  // .github/workflows/deploy.yml redeploys, so the site root must stay the repo root.
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "preview_urls": false
+}
